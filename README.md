@@ -1,7 +1,7 @@
 # SideMenu
 Simple SideMenu control
 
-![alt text](http://imgur.com/Dj7q2YR "SideMenu")
+![alt text](http://i.imgur.com/Dj7q2YR.png "SideMenu")
 
 ## Use
 ```
