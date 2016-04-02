@@ -1,5 +1,5 @@
 # SideMenu
-Simple SideMenu control
+Simple WPF SideMenu control
 
 ![alt text](http://i.imgur.com/Dj7q2YR.png "SideMenu")
 
