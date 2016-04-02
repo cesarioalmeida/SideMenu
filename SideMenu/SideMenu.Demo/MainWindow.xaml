@@ -1,0 +1,40 @@
+﻿<Window x:Class="SideMenu.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:SideMenu.Controls;assembly=SideMenu"
+        mc:Ignorable="d"
+        Title="SideMenu Demo" Height="768" Width="1024">
+    
+    <Grid Background="#feee" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <controls:SideMenu Width="190" Title="Demo Menu">
+            <controls:SideMenu.Items>
+                <controls:LabelMenuItem Text="MAIN"/>
+                <controls:ClickableMenuItem Text="DASHBOARD" Icon="Assets/Home.png" IsChecked="True" />
+                <controls:ClickableMenuItem Text="SEARCH" Icon="Assets/search.png" />
+                <controls:SeparatorMenuItem />
+                <controls:LabelMenuItem Text="MORE"/>
+                <controls:ClickableMenuItem Text="USER" Icon="Assets/person.png" />
+                <controls:ClickableMenuItem Text="FAVORITES" Icon="Assets/favorite.png" />
+            </controls:SideMenu.Items>
+            <controls:SideMenu.BarItems>
+                <controls:SelectableBarButtonMenuItem Icon="Assets/list.png" />
+                <controls:BarButtonMenuItem Icon="Assets/reload.png" />
+            </controls:SideMenu.BarItems>
+        </controls:SideMenu>
+
+    </Grid>
+</Window>
+
+
+
+
+
+
+

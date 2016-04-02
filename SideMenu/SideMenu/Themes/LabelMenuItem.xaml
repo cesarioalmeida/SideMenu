@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:SideMenu.Controls">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/SideMenu;component/Themes/Theme.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type controls:LabelMenuItem}">
+        <Setter Property="Margin" Value="0,0,0,0"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Stroke" Value="#2000"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="Fill" Value="{StaticResource Gray1Brush}"/>
+        <Setter Property="Opacity" Value="0.6"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="FontFamily" Value="/SideMenu;component/Assets/#Work Sans ExtraBold"/>
+    </Style>
+
+</ResourceDictionary>

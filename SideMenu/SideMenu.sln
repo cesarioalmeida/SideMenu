@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SideMenu", "SideMenu\SideMenu.csproj", "{B24EB6C8-C06A-46E1-B4F0-570E5269A246}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SideMenu.Demo", "SideMenu.Demo\SideMenu.Demo.csproj", "{4F737F07-B3FE-41EB-A3D7-C6E8F1026ACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B24EB6C8-C06A-46E1-B4F0-570E5269A246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24EB6C8-C06A-46E1-B4F0-570E5269A246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24EB6C8-C06A-46E1-B4F0-570E5269A246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24EB6C8-C06A-46E1-B4F0-570E5269A246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F737F07-B3FE-41EB-A3D7-C6E8F1026ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F737F07-B3FE-41EB-A3D7-C6E8F1026ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F737F07-B3FE-41EB-A3D7-C6E8F1026ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F737F07-B3FE-41EB-A3D7-C6E8F1026ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
