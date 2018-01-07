@@ -1,35 +1,55 @@
-﻿using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-
-namespace SideMenu.Controls
+﻿namespace SideMenu.Controls
 {
+    using System.Collections.Generic;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Controls.Primitives;
+
     public class SideMenu : ContentControl
     {
+        public static readonly DependencyProperty BarItemsProperty = DependencyProperty.Register(
+            "BarItems",
+            typeof(List<ButtonBase>),
+            typeof(SideMenu),
+            new FrameworkPropertyMetadata(
+                null,
+                FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.AffectsMeasure));
+
+        public static readonly DependencyProperty ItemsProperty = DependencyProperty.Register(
+            "Items",
+            typeof(List<FrameworkElement>),
+            typeof(SideMenu),
+            new FrameworkPropertyMetadata(
+                null,
+                FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.AffectsMeasure));
+
+        public static readonly DependencyProperty TitleProperty = DependencyProperty.Register(
+            "Title",
+            typeof(string),
+            typeof(SideMenu),
+            new PropertyMetadata(default(string)));
+
         static SideMenu()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SideMenu), new FrameworkPropertyMetadata(typeof(SideMenu)));
         }
 
-        public static readonly DependencyProperty ItemsProperty =
-            DependencyProperty.Register("Items", typeof(List<FrameworkElement>), typeof(SideMenu),
-            new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.AffectsMeasure));
+        public List<ButtonBase> BarItems
+        {
+            get => (List<ButtonBase>)this.GetValue(BarItemsProperty);
+            set => this.SetValue(BarItemsProperty, value);
+        }
 
         public List<FrameworkElement> Items
         {
-            get { return (List<FrameworkElement>)this.GetValue(ItemsProperty); }
-            set { this.SetValue(ItemsProperty, value); }
+            get => (List<FrameworkElement>)this.GetValue(ItemsProperty);
+            set => this.SetValue(ItemsProperty, value);
         }
 
-        public static readonly DependencyProperty BarItemsProperty =
-            DependencyProperty.Register("BarItems", typeof(List<ButtonBase>), typeof(SideMenu),
-            new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.AffectsMeasure));
-
-        public List<ButtonBase> BarItems
+        public string Title
         {
-            get { return (List<ButtonBase>)this.GetValue(BarItemsProperty); }
-            set { this.SetValue(BarItemsProperty, value); }
+            get => (string)this.GetValue(TitleProperty);
+            set => this.SetValue(TitleProperty, value);
         }
 
         public override void BeginInit()
@@ -37,15 +57,6 @@ namespace SideMenu.Controls
             this.Items = new List<FrameworkElement>();
             this.BarItems = new List<ButtonBase>();
             base.BeginInit();
-        }
-
-        public static readonly DependencyProperty TitleProperty =
-            DependencyProperty.Register("Title", typeof(string), typeof(SideMenu), new PropertyMetadata(default(string)));
-
-        public string Title
-        {
-            get { return (string)this.GetValue(TitleProperty); }
-            set { this.SetValue(TitleProperty, value); }
         }
     }
 }
