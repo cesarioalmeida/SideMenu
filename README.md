@@ -5,7 +5,7 @@ Simple WPF SideMenu control
 
 ## Use
 ```
-<controls:SideMenu
+        <controls:SideMenu
             Title="Demo Menu"
             Width="190"
             MinWidth="20"
