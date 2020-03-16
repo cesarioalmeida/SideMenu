@@ -1,6 +1,7 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:controls="clr-namespace:SideMenu.Controls">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:SideMenu.Controls">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/SideMenu;component/Themes/Theme.xaml" />
     </ResourceDictionary.MergedDictionaries>
@@ -9,58 +10,61 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:SideMenu}">
-                    <Border BorderBrush="Transparent"
-                            BorderThickness="0">
+                    <Border BorderBrush="Transparent" BorderThickness="0">
                         <Border.Background>
                             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                 <GradientStop Offset="0" Color="{StaticResource BgStarColour}" />
                                 <GradientStop Offset="1" Color="{StaticResource BgEndColour}" />
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Grid Margin="0"
-                              HorizontalAlignment="Stretch"
-                              VerticalAlignment="Stretch">
+                        <Grid
+                            Margin="0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="50" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <controls:OutlinedTextBlock Margin="10,0"
-                                                        HorizontalAlignment="Left"
-                                                        VerticalAlignment="Center"
-                                                        Fill="{StaticResource TitleBrush}"
-                                                        FontFamily="/SideMenu;component/Assets/#Work Sans Extrabold"
-                                                        FontSize="22"
-                                                        FontStyle="Normal"
-                                                        FontWeight="Bold"
-                                                        Stroke="{StaticResource DarkTitleBrush}"
-                                                        StrokeThickness="1"
-                                                        Text="{TemplateBinding Title}"
-                                                        UseLayoutRounding="False">
+                            <controls:OutlinedTextBlock
+                                Margin="10,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Fill="{StaticResource TitleBrush}"
+                                FontFamily="/SideMenu;component/Assets/#Work Sans Extrabold"
+                                FontSize="22"
+                                FontStyle="Normal"
+                                FontWeight="Bold"
+                                Stroke="{StaticResource DarkTitleBrush}"
+                                StrokeThickness="1"
+                                Text="{TemplateBinding Title}"
+                                UseLayoutRounding="False">
                                 <controls:OutlinedTextBlock.Effect>
-                                    <DropShadowEffect BlurRadius="2"
-                                                      Opacity="0.5"
-                                                      RenderingBias="Performance"
-                                                      ShadowDepth="1" />
+                                    <DropShadowEffect
+                                        BlurRadius="2"
+                                        Opacity="0.5"
+                                        RenderingBias="Performance"
+                                        ShadowDepth="1" />
                                 </controls:OutlinedTextBlock.Effect>
                             </controls:OutlinedTextBlock>
-                            <Border Grid.Row="1"
-                                    Margin="0"
-                                    BorderBrush="#4000"
-                                    BorderThickness="0,1,0,0">
-                                <DockPanel Margin="10,20,10,10"
-                                           VerticalAlignment="Stretch"
-                                           LastChildFill="False">
-                                    <ItemsControl DockPanel.Dock="Top"
-                                                  ItemsSource="{TemplateBinding Items}" />
-                                    <ItemsControl Height="30"
-                                                  VerticalAlignment="Center"
-                                                  VerticalContentAlignment="Center"
-                                                  DockPanel.Dock="Bottom"
-                                                  ItemsSource="{TemplateBinding BarItems}">
+                            <Border
+                                Grid.Row="1"
+                                Margin="0"
+                                BorderBrush="#4000"
+                                BorderThickness="0,1,0,0">
+                                <DockPanel
+                                    Margin="10,20,10,10"
+                                    VerticalAlignment="Stretch"
+                                    LastChildFill="False">
+                                    <ItemsControl DockPanel.Dock="Top" ItemsSource="{TemplateBinding Items}" />
+                                    <ItemsControl
+                                        Height="30"
+                                        VerticalAlignment="Center"
+                                        VerticalContentAlignment="Center"
+                                        DockPanel.Dock="Bottom"
+                                        ItemsSource="{TemplateBinding BarItems}">
                                         <ItemsControl.ItemsPanel>
                                             <ItemsPanelTemplate>
-                                                <StackPanel HorizontalAlignment="Right"
-                                                            Orientation="Horizontal" />
+                                                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" />
                                             </ItemsPanelTemplate>
                                         </ItemsControl.ItemsPanel>
                                     </ItemsControl>
