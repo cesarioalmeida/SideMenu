@@ -5,15 +5,22 @@ Simple WPF SideMenu control
 
 ## Use
 ```
-<controls:SideMenu Width="190" Title="Demo Menu">
+<controls:SideMenu
+            Title="Demo Menu"
+            Width="190"
+            MinWidth="20"
+            IsCollapsible="True">
             <controls:SideMenu.Items>
-                <controls:LabelMenuItem Text="MAIN"/>
-                <controls:ClickableMenuItem Text="DASHBOARD" Icon="Assets/Home.png" IsChecked="True" />
-                <controls:ClickableMenuItem Text="SEARCH" Icon="Assets/search.png" />
+                <controls:LabelMenuItem Text="MAIN" />
+                <controls:ClickableMenuItem
+                    Icon="Assets/Home.png"
+                    IsChecked="True"
+                    Text="DASHBOARD" />
+                <controls:ClickableMenuItem Icon="Assets/search.png" Text="SEARCH" />
                 <controls:SeparatorMenuItem />
-                <controls:LabelMenuItem Text="MORE"/>
-                <controls:ClickableMenuItem Text="USER" Icon="Assets/person.png" />
-                <controls:ClickableMenuItem Text="FAVORITES" Icon="Assets/favorite.png" />
+                <controls:LabelMenuItem Text="MORE" />
+                <controls:ClickableMenuItem Icon="Assets/person.png" Text="USER" />
+                <controls:ClickableMenuItem Icon="Assets/favorite.png" Text="FAVORITES" />
             </controls:SideMenu.Items>
             <controls:SideMenu.BarItems>
                 <controls:SelectableBarButtonMenuItem Icon="Assets/list.png" />

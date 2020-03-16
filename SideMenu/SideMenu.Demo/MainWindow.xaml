@@ -16,7 +16,11 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <controls:SideMenu Title="Demo Menu" Width="190">
+        <controls:SideMenu
+            Title="Demo Menu"
+            Width="190"
+            MinWidth="20"
+            IsCollapsible="True">
             <controls:SideMenu.Items>
                 <controls:LabelMenuItem Text="MAIN" />
                 <controls:ClickableMenuItem
